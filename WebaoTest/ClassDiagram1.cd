@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Webao.Test.WebaoArtist">
+    <Position X="1.5" Y="0.75" Width="2.5" />
+    <Members>
+      <Method Name="WebaoArtist" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAA=</HashCode>
+      <FileName>WebaoArtist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Webao.Test.WebaoTrack">
+    <Position X="4.75" Y="0.75" Width="3.25" />
+    <Members>
+      <Method Name="WebaoTrack" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>WebaoTrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
