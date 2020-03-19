@@ -25,7 +25,7 @@ As classes WebaoArtist e WebaoTrack exemplificam dois tipos de _web access
 objects_ com métodos para obtenção de artistas e músicas (i.e. `Artist` e
 `Track`).
 
-<img src="assets/webaos.jpg" width="600px"/> 
+<img src="assets/Webaos.jpg" width="600px"/> 
 
 A informação devolvida por estes _web access objects_ é obtida neste exemplo a
 partir da API Restfull Last.fm. 
