@@ -1,7 +1,3 @@
-Mock em ficheiro
-
-Outro exemplo de acesso a outra Web API Restful
-
 # Enunciado do Trabalho 1
 
 **Data limite de entrega: 6 de Abril**
