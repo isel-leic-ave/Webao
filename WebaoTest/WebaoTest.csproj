@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HttpRequestTest.cs" />
     <Compile Include="AccessObjectTest.cs" />
     <Compile Include="Dto\Artist.cs" />
     <Compile Include="Dto\DtoArtist.cs" />

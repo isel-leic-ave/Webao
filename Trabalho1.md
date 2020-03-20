@@ -14,17 +14,18 @@ os detalhes de acesso à fonte de dados (e.g. base de dados).
 A biblioteca **Webao** permitirá construir _web access objects_ com métodos que
 retornam objectos de domínio com base na informação obtida de uma Web API
 Restful.
+Esta ideia é inspirada nos objectivos da biblioteca [Retrofit](https://square.github.io/retrofit/).
 De forma simplificada e informal, uma Web API Restful pode ser entendida como
 uma API acedida via HTTP que retorna dados em formato JSON
 (https://www.json.org/).
-As classes WebaoArtist e WebaoTrack exemplificam dois tipos de _web access
+As classes `WebaoArtist` e `WebaoTrack` exemplificam dois tipos de _web access
 objects_ com métodos para obtenção de artistas e músicas (i.e. `Artist` e
 `Track`).
 
 <img src="assets/Webaos.jpg" width="600px"/> 
 
 A informação devolvida por estes _web access objects_ é obtida neste exemplo a
-partir da API Restfull Last.fm. 
+partir da [API Restfull Last.fm](https://www.last.fm/api/rest). 
 Os métodos destes _data acess objects_ acedem aos seguintes URLs (deverá
 registar-se na Last.fm Web API e obter uma `api_key ` para realizar os pedidos
 exemplificados):
@@ -87,7 +88,7 @@ As anotações têm o seguinte papel:
 * `BaseUrl` - DNS e caminho a incluir em todos os pedidos.
 * `AddParameter` - _query-string parameter_ a adicionar a todos os pedidos.
 * `Get` -- especifica o path a concatenar com o `BaseUrl` para formar o URL do pedido.
-* `Mapping` - especifica: 1) o tipo para o qual deve ser convertido a resposta JSON e 2) o grafo de propriedades que têm que ser acedidas para obter o resultado a retornar.
+* `Mapping` - especifica: 1) o tipo para o qual deve ser convertido a resposta JSON (e.g. `typeof(DtoArtist)`) e 2) o grafo de propriedades que têm que ser acedidas para obter o resultado a retornar.
 
 Por exemplo no caso do método `search()` o caminho `.Results.ArtistMatches.Artist` especifica as propriedades que devem ser percorridas no grafo da imagem seguinte desde `DtoSearch` até chegar a `List<Artist>`:
 
@@ -107,6 +108,35 @@ O método `Get` da instância de `IRequest` recebe como parâmetro o URL do pedi
 (`path`) e o tipo (`targetType`) para o qual será convertido a resposta JSON. 
 Ou seja, no exemplo anterior do método `search()` o parâmetro `targetType`
 receberá o tipo presente na anotação correspondente a `typeof(DtoSearch`).
+
+A listagem seguinte ilustra o exemplo de commo realizar pedidos através de `HttpRequest`
+às rotas de pesquisa de artistas (`method=artist.search`) e _top tracks_ (`method=geo.gettoptracks`)
+do Last.fm Web API.
+
+```csharp
+HttpRequest req = new HttpRequest();
+req.BaseUrl("http://ws.audioscrobbler.com/2.0");
+req.AddParameter("format", "json");
+req.AddParameter("api_key", "************");
+/*
+ * Search for band Muse
+ */
+DtoSearch dto = (DtoSearch) req.Get(
+    "?method=artist.search&artist=muse", 
+    typeof(DtoSearch));
+Assert.AreEqual("Muse", dto.Results.ArtistMatches.Artist[0].Name);
+Assert.AreEqual("Mouse on Mars", dto.Results.ArtistMatches.Artist[3].Name);
+/*
+ * Get top tracks from Australia
+ */
+DtoGeoTopTracks aus = (DtoGeoTopTracks) req.Get(
+    "?method=geo.gettoptracks&country=australia", 
+    typeof(DtoGeoTopTracks));
+List<Track> tracks = aus.Tracks.Track;
+Assert.AreEqual("The Less I Know the Better", tracks[0].Name);
+Assert.AreEqual("Mr. Brightside", tracks[1].Name);
+Assert.AreEqual("The Killers", tracks[1].Artist.Name);
+```
 
 ## Parte 1
 
