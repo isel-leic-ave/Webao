@@ -121,7 +121,7 @@ class WebaoDummy {
 
 ```csharp
 class WebaoDummy {
-  public object Search(object name, int page) {
+  public List<Artist> Search(object name, int page) {
     // 1. processamento do path...
     // 2. obter dto
     return dto.Results.ArtistMatches.Artist;
