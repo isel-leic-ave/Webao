@@ -81,6 +81,7 @@ public class WebaoTrack : AbstractAccessObject
 }
 ```
 
+</td>
 </tr>
 </table>
 
@@ -109,7 +110,7 @@ O método `Get` da instância de `IRequest` recebe como parâmetro o URL do pedi
 Ou seja, no exemplo anterior do método `search()` o parâmetro `targetType`
 receberá o tipo presente na anotação correspondente a `typeof(DtoSearch`).
 
-A listagem seguinte ilustra o exemplo de commo realizar pedidos através de `HttpRequest`
+A listagem seguinte ilustra o exemplo de como realizar pedidos através de `HttpRequest`
 às rotas de pesquisa de artistas (`method=artist.search`) e _top tracks_ (`method=geo.gettoptracks`)
 do Last.fm Web API.
 
