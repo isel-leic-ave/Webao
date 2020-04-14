@@ -1,6 +1,6 @@
 # Enunciado do Trabalho 2
 
-**Data limite de entrega: 27 de Abril**
+**Data limite de entrega: ~~27 de Abril~~ 3 de Maio**
 
 **Objectivos**: _meta-programação_ -- análise e manipulação programática de código
 intermédio com API de `System.Reflection.Emit`.
