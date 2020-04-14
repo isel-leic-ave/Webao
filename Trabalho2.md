@@ -168,10 +168,10 @@ Adicione à solução um novo projecto de uma aplicação consola (.Net Framewor
 designado  **WebaoBench** que compare o desempenho entre as implementações dos 
 Trabalhos 1 e 2.
 
-Na medição de desepenho não deve ser realizado IO e nem conversão de JSON em objectos.
+Na medição de desempenho não deve ser realizado IO e nem conversão de JSON em objectos.
 Para tal use uma versão _mock_ de `IRequest` que tenha o menor processamento possível
 na execução do método `Get()`.
-O método `Get()` deste _mock_ deve obetr os objectos duma _cache_ interna em memória.
+O método `Get()` deste _mock_ deve obter os objectos duma _cache_ interna em memória.
 
 Para as medições de desempenho **use a abordagem apresentada nas aulas**
 (**atenção que testes de desempenho NÃO são testes unitários**). Registe e
