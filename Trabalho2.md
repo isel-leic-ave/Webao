@@ -139,7 +139,7 @@ attributes_.
 Ou seja, o `path`, o tipo do DTO e as propriedade acedidas são as que tiverem
 especificadas nos _custom attributes_
 
-Para cada uma das etapas anteriores deve realizar **TODOS** os passsos seguintes
+Para cada uma das etapas anteriores deve realizar **TODOS** os passos seguintes
 sem saltar nenhum deles.
 
 * a) implementar a classe _dummy_ em c# com o código equivalente ao que pretende
