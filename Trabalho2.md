@@ -136,7 +136,7 @@ class WebaoDummy {
 **ATENÇÃO** que o código que implementar no `WebaoDynBuilder` não deve ser _hard
 coded_ mas sim com base na informação anotada nos respectivos _custom
 attributes_.
-Ou seja, o `path`, o tipo do dto e as propriedade acedidas são as que tiverem
+Ou seja, o `path`, o tipo do DTO e as propriedade acedidas são as que tiverem
 especificadas nos _custom attributes_
 
 Para cada uma das etapas anteriores deve realizar **TODOS** os passsos seguintes
