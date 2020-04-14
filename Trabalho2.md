@@ -67,7 +67,7 @@ Como suporte ao desenvolvimento de `WebaoDynBuilder` deve usar as ferramentas:
   * `ildasm`
   * `peverify`
 
-Em cada etapa deve desenvolver em C# uma classe _dummy_ num projecto aparte com
+Em cada etapa deve desenvolver em C# uma classe _dummy_ num projecto à parte com
 uma implementação semelhante aquela que pretende que seja gerada através da API
 de `System.Reflection.Emit`. 
 Compile a classe _dummy_ e use a ferramenta `ildasm` para visualizar as instruções
