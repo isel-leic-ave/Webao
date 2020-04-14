@@ -146,7 +146,7 @@ sem saltar nenhum deles.
   gerar.
 * b) compilar essa classe com `csc \optimize+ \debug-`
 * c) visualizar com o `ildasm` as instruções IL correspondentes e implementar a
-  geração dinamica dessas instruções via `Emit`. **ATENÇÃO** esta implementação
+  geração dinâmica dessas instruções via `Emit`. **ATENÇÃO** esta implementação
   **NÃO** deve estar comprometida com nenhum caso concreto de `Artist`, `Team`, etc.
 * d) executar o `Build()` do `WebaoDynBuilder` e gravar a dll com a classe
   gerada dinamicamente.
