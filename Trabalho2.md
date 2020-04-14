@@ -34,7 +34,7 @@ public interface WebaoDynArtist
 uma implementação de uma classe que implementa a interface especificada.
 **ATENÇÃO** a classe gerada dinamicamente:
 1. **NÃO** pode fazer operações de reflexão. 
-2. **NÃO** extende de `AbstractAccessObject`.
+2. **NÃO** estende de `AbstractAccessObject`.
 
 Por exemplo, a obtenção das propriedades `Results`, `ArtistMatches` e `Artist`
 que é feita para o método `Search()` por via de reflexão em
