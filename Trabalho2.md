@@ -18,8 +18,9 @@ Para tal os _web access objects_ passam a poder ser definidos por interfaces, co
 
 ```csharp
 Request req = new HttpRequest();
-WebaoDynArtist webaoDyn = (WebaoDynArtist) WebaoDynBuilder
-                            .Build(typeof(WebaoDynArtist), req);
+WebaoDynArtist webaoDyn = 
+  (WebaoDynArtist) WebaoDynBuilder
+    .Build(typeof(WebaoDynArtist), req);
 ```
 
 
