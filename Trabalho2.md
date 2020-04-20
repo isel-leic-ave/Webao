@@ -10,8 +10,21 @@ desenvolver uma nova classe `WebaoDynBuilder` com o mesmo comportamento de
 `WebaoBuilder`, mas que pretende **simplificar** a definição e obter
 **melhor desempenho** dos _web access objects_.
 
-Para tal os _web access objects_ passam a poder ser definidos por interfaces, conforme o
-exemplo seguinte:
+Para tal os _web access objects_ passam a poder ser definidos por interfaces, conforme o exemplo seguinte:
+
+<table>
+<tr>
+<td>
+
+```csharp
+Request req = new HttpRequest();
+WebaoDynArtist webaoDyn = (WebaoDynArtist) WebaoDynBuilder
+                            .Build(typeof(WebaoDynArtist), req);
+```
+
+
+</td>
+<td>
 
 ```csharp
 [BaseUrl("http://ws.audioscrobbler.com/2.0/")]
@@ -29,6 +42,10 @@ public interface WebaoDynArtist
     List<Artist> Search(string name, int page);
 }
 ```
+
+</td>
+</tr>
+</table>
 
 `WebaoDynBuilder` deve gerar em tempo de execução (dinamicamente)
 uma implementação de uma classe que implementa a interface especificada.
