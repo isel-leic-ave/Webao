@@ -24,7 +24,7 @@ Assim o utilizador poderá usar _custom mattribute_ `Mapping` da seguinte forma:
 List<Artist> Search(string name, int page);
 ```
 
-Neste caso `GetArtistsList` é o nome do método da classe `DtoSearch` que faz: `return dto.Results.ArtistMatches.Artist;`.
+Neste caso `GetArtistsList` é o nome do método da classe `DtoSearch` que faz: `return this.Results.ArtistMatches.Artist;`.
 
 ## 2- Genéricos e API fluente
 
