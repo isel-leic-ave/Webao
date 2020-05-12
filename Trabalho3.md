@@ -1,6 +1,6 @@
 # Enunciado do Trabalho 3
 
-**Data limite de entrega: 8 de Junho**
+**Data limite de entrega: 2 de Junho**
 
 **Objectivos**: Delegates, Genéricos e Prática com Iteradores _lazy_ (_yield generators_).
 
