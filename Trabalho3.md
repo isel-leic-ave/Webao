@@ -20,7 +20,7 @@ Assim o utilizador poderá usar _custom mattribute_ `Mapping` da seguinte forma:
 
 ```csharp
 [Get("...")]
-[Mapping(typeof(DtoSearch), Width(typeof(DtoSearch.GetArtistsList)))]
+[Mapping(typeof(DtoSearch), Width = typeof(DtoSearch.GetArtistsList))]
 List<Artist> Search(string name, int page);
 ```
 
