@@ -28,7 +28,7 @@ Neste caso `GetArtistsList` é o nome do método da classe `DtoSearch` que faz: 
 
 ## 2- Genéricos e API fluente
 
-Pretende-se oferecer ao cliente da biblioeteca **Webao** uma forma **alternativa** 
+Pretende-se oferecer ao cliente da biblioteca **Webao** uma forma **alternativa** 
 à configuração por _custom attributes_.
 **ATENÇÃO** NÃO use _extension methods_ na implementação desta funcionalidade.
 
