@@ -16,7 +16,7 @@ Pretende-se que o _custom mattribute_ `Mapping` possa receber na forma de um _de
 a função que irá extrair o valor do _dto_.
 Esta utilização será alternativa à do segundo parâmetro do construtor de `Mapping`
 referente ao grafo de propriedades que têm que ser acedidas para obter o resultado a retornar.
-Assim o utilizador poderá usar _custom mattribute_ `Mapping` da seguinte forma:
+Assim o utilizador poderá usar o _custom attribute_ `Mapping` da seguinte forma:
 
 ```csharp
 [Get("...")]
