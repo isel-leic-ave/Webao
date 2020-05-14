@@ -20,7 +20,7 @@ Assim o utilizador poderá usar o _custom attribute_ `Mapping` da seguinte forma
 
 ```csharp
 [Get("...")]
-[Mapping(typeof(DtoSearch), Width = typeof(DtoSearch.GetArtistsList))]
+[Mapping(typeof(DtoSearch), Width = "DtoSearch.GetArtistsList")]
 List<Artist> Search(string name, int page);
 ```
 
