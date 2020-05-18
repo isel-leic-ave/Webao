@@ -70,7 +70,7 @@ WebaoDynArtist webao = WebaoDynBuilder
     .On("Search")
     .GetFrom("?method=artist.search&artist={name}&page={page}")
     .Mapping<DtoSearch>(dto => dto.Results.ArtistMatches.Artist)
-    .Build()
+    .Build(req);
 ```
 
 Os métodos anteriores podem ser encadeados pela seguinte ordem sendo que o `For()` será
