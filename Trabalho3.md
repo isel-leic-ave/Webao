@@ -34,7 +34,7 @@ O utilizador poderá usar o _custom attribute_ `Mapping` da seguinte forma:
 
 ```csharp
 [Get("...")]
-[Mapping(typeof(DtoSearch), With = "DtoSearch.GetArtistsList")]
+[Mapping(typeof(DtoSearch), With = "Webao.Test.Dto.DtoSearch.GetArtistsList")]
 List<Artist> Search(string name, int page);
 ```
 
