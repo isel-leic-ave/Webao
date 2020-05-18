@@ -10,23 +10,37 @@ dar suporte a tipos genéricos e operações _lazy_.
 Todas as funcionalidades pedidas neste enunciado devem ser suportadas
 **apenas na classe `WebaoDynBuilder`**.
 
-## 1- _delegates_
+## 1 -
 
-Pretende-se que o _custom mattribute_ `Mapping` possa receber na forma de um _delegate_
-a função que irá extrair o valor do _dto_.
+Pretende-se que o _custom mattribute_ `Mapping` possa guardar o método responsável por
+extrair o valor do _dto_ (e.g. uma função `GetArtistsList` que está
+previamente definida em `DtoSearch`, ou noutra classe qualquer).
 Esta utilização será alternativa à do segundo parâmetro do construtor de `Mapping`
 referente ao grafo de propriedades que têm que ser acedidas para obter o resultado a retornar.
+Assim a classe `Mappingattribute` passar a ter dois construtores:
+
+```csharp
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
+public class MappingAttribute : Attribute
+{
+    ...
+    public MappingAttribute(Type dto, string path) {...}
+    public MappingAttribute(Type dto) {...}
+    public string With { set { ... } }
+    ...
+```
+
 Assim o utilizador poderá usar o _custom attribute_ `Mapping` da seguinte forma:
 
 ```csharp
 [Get("...")]
-[Mapping(typeof(DtoSearch), Width = "DtoSearch.GetArtistsList")]
+[Mapping(typeof(DtoSearch), With = "DtoSearch.GetArtistsList")]
 List<Artist> Search(string name, int page);
 ```
 
 Neste caso `GetArtistsList` é o nome do método da classe `DtoSearch` que faz: `return this.Results.ArtistMatches.Artist;`.
 
-## 2- Genéricos e API fluente
+## 2 - Genéricos e API fluente
 
 Pretende-se oferecer ao cliente da biblioteca **Webao** uma forma **alternativa** 
 à configuração por _custom attributes_.
