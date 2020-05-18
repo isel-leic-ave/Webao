@@ -78,6 +78,10 @@ sempre o método inicial e o `Build()` a operação terminal:
 
 <img src="assets/builder-fluent-api.jpg" width="600px"/> 
 
+Destes métodos o único que deve residir no `WebaoDynbBuilder` é o `For()`,
+sendo que os restantes devem ser definidos em classes auxiliares.
+Por facilidade, numa 1ª etapa poderá defini-los como métodos de instância de
+`WebaoDynbBuilder` e posteriormente reorganizar o código.
 
 Realize testes unitários para uma nova versão de cada um dos tipos Webao que
 implementou nos testes unitários dos trabalhos anteriores, usando esta nova
