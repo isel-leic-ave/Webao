@@ -10,7 +10,7 @@ dar suporte a tipos genéricos e operações _lazy_.
 Todas as funcionalidades pedidas neste enunciado devem ser suportadas
 **apenas na classe `WebaoDynBuilder`**.
 
-## 1 -
+## 1 -  _custom mattribute_ `Mapping`
 
 Pretende-se que o _custom mattribute_ `Mapping` possa guardar o método responsável por
 extrair o valor do _dto_ (e.g. uma função `GetArtistsList` que está
@@ -30,7 +30,7 @@ public class MappingAttribute : Attribute
     ...
 ```
 
-Assim o utilizador poderá usar o _custom attribute_ `Mapping` da seguinte forma:
+O utilizador poderá usar o _custom attribute_ `Mapping` da seguinte forma:
 
 ```csharp
 [Get("...")]
@@ -40,7 +40,7 @@ List<Artist> Search(string name, int page);
 
 Neste caso `GetArtistsList` é o nome do método da classe `DtoSearch` que faz: `return this.Results.ArtistMatches.Artist;`.
 
-## 2 - Genéricos e API fluente
+## 2 - Genéricos, API fluente e _delegates_
 
 Pretende-se oferecer ao cliente da biblioteca **Webao** uma forma **alternativa** 
 à configuração por _custom attributes_.
