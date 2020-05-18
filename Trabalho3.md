@@ -50,10 +50,8 @@ Assim a interface que especifica um Webao (e.g. `WebaoDynTrack`, `WebaoDynArtist
 passa a poder ser definida como no exemplo seguinte:
 
 ```csharp
-interface WebaoDynArtist
-{
+interface WebaoDynArtist {
     Artist GetInfo(string name);
-
     List<Artist> Search(string name, int page);
 }
 ```
@@ -74,6 +72,12 @@ WebaoDynArtist webao = WebaoDynBuilder
     .Mapping<DtoSearch>(dto => dto.Results.ArtistMatches.Artist)
     .Build()
 ```
+
+Os métodos anteriores podem ser encadeados pela seguinte ordem sendo que o `For()` será
+sempre o método inicial e o `Build()` a operação terminal:
+
+<img src="assets/builder-fluent-api.jpg" width="600px"/> 
+
 
 Realize testes unitários para uma nova versão de cada um dos tipos Webao que
 implementou nos testes unitários dos trabalhos anteriores, usando esta nova
