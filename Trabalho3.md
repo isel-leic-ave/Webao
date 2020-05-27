@@ -103,6 +103,7 @@ Por exemplo:
 ```csharp
 class ServiceTracks
 {
+    private readonly WebaoTrack webao;
     public ServiceTracks() : this(new HttpRequest()) {}
     public ServiceTracks(IRequest req) {....}
     public IEnumerable<Track> TopTracksFrom(string country) {...}
